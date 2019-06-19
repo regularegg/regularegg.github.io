@@ -1,0 +1,128 @@
+html {
+    height: 100%;
+}
+.test.scrolled {
+  background-color: red !important;
+  transition: background-color 200ms linear;
+}
+body {
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient( rgba(0,0,0,0), rgba(84, 12, 178, 0.1));
+    font-family: static_bold;
+}
+div.head-content{
+    display: flex;
+    justify-content: center;
+    background-color: #540cb2;
+    padding: 50px;
+    color: white;
+  }
+  div.head-sub-content{
+    display: flex;
+    flex-direction: column;
+  }
+.push{
+  margin-left: auto;
+}
+#headerButton{
+  background-color: #FFD30F;
+  color: #540cb2;
+}
+#head-text-title{
+    color: white;
+    width: 30%;
+    margin: 5%;
+    font-size: 75px;
+    font-weight: bold;
+    outline-color: red;
+  }
+#head-text-subtext{
+    color: white;
+    width: 100%;
+    font-size: 0.5em;
+  }
+#head-img{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.text-bottom-left {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.service-title{
+  width: 100%;
+  padding-top: 50px;
+      text-align: center;
+      font-size: 50px;
+}
+.service-descriptor{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin: 25px;
+}
+.service-items{
+  width: 300px;
+  margin: 40px;
+  flex-wrap: wrap;
+  padding: 10px;
+  text-align: center;
+  font-size: 30px;
+}
+.button{
+  border: none;
+  width: 50%;
+  border-radius: 2px;
+  font-size: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#bodyButton{
+  background-color: #540cb2;
+  width: auto;
+  padding: 10px;
+  color: white;
+}
+#spacer{
+  height: 50px;
+}
+
+#TopHeader{
+  background-image: linear-gradient( rgba(84,12,178), rgba(50,7,106));
+}
+
+#fullWidthButton{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.container{
+  display: flex;
+  padding: 5%;
+  padding-top: 5%;
+  width: 100%;
+}
+.address-checker{
+  width: 50%;
+}
+
+input {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid transparent;
+  border-radius: 2px;
+  background-color: #f1f1f1;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
