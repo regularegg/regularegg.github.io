@@ -47,7 +47,7 @@
       <button id= "headerButton" class="button">Get The Run Down now</button>
     </div>
   <div id="head-img">
-    <img src="./images/signup-mockup.png" alt="http://pngimg.com/uploads/dog/dog_PNG50346.png" width="500px"  style="vertical-align: bottom;">
+    <img src="./images/iphone-home-cropped.png" alt="./images/signup-mockup.png" width="500px"  style="vertical-align: bottom;">
     <div class="text-bottom-left">
       Hlo I am a cool dog
     </div>
@@ -104,6 +104,40 @@
     <form>
       <h3>Check if your building is supported<br></h3>
       <input type="text" name="address" placeholder="Enter your address"><br>
+      <input type="submit">
+      <script>
+        function autocomplete(inp, arr){
+          var currentFocus;
+          inp.addEventListener("input",function(e){
+            var a, b, i, val = this.value;
+            closeAllLists();
+            if(!val){
+              return false;
+            }
+            currentFocus = -1;
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id+"autocomplete-list");
+            a.setAttribute("class","autocomplete-items");
+            this.parentNode.appendChild(a);
+            for (var i = 0; i < array.length; i++) {
+              if(arr[i].substr(0,val.length).toUpperCase()==val.toUpperCase()){
+                b = document.createElement("DIV");
+                b.innerHTML = "<strong>" + arr[i].substr(0,val.length)+"</strong>";
+                b.innerHTML += arr[i].substr(val.length);
+                b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                b.addEventListener("click", function(e){
+                  inp.value = this.getElementsByTagName("input")[0].value;
+                  closeAllLists();
+                });
+                a.appendChild(b);
+              }
+          }
+        });
+
+        inp.addEventListener("keydown", function(e){
+          
+        });
+      </script>
     </form>
   </div>
 </div>
