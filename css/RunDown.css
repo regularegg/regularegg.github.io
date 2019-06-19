@@ -17,7 +17,6 @@ div.head-content{
     display: flex;
     justify-content: center;
     background-color: #540cb2;
-    padding: 50px;
     color: white;
   }
   div.head-sub-content{
@@ -37,7 +36,6 @@ div.head-content{
     margin: 5%;
     font-size: 75px;
     font-weight: bold;
-    outline-color: red;
   }
 #head-text-subtext{
     color: white;
@@ -46,6 +44,8 @@ div.head-content{
   }
 #head-img{
   position: relative;
+  align-self: stretch;
+  align-items: stretch;
   text-align: center;
   color: white;
 }
