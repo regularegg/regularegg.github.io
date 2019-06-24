@@ -96,9 +96,14 @@ function autocomplete(inp, arr) {
   });
 }
 
+function checkInput(inp, outp, arr){
+
+}
+
 /*An array containing all the country names in the world:*/
-var countries = ["123 Dogville Avenue", "55 Super Sausage Street", "35 Puppy Place"];
+var addresses = ["123 Dogville Avenue", "55 Super Sausage Street", "35 Puppy Place"];
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 
-autocomplete(document.getElementById("myInput"), countries);
+autocomplete(document.getElementById("myInput"), addresses);
+checkInput(document.getElementById("myInput"), document.getElementById("submitOutcome") addresses)
