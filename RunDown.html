@@ -99,22 +99,14 @@
 <div class="container">
   <div class="address-checker">
     <h3>Check if your building is supported</h3>
-    <form autocomplete="off" onsubmit="">
+    <form autocomplete="off" >
       <div class="autocomplete" style="width:300px;">
         <input id="myInput" type="text" name="myCountry" placeholder="Enter your address">
       </div>
-      <input type="submit" style="width:100px;">
+      <button class = "button" style="width:100px;" onclick="checkInput(document.getElementById("myInput"), addresses)">Check</button>
     </form>
     <p id="submitOutcome"></p>
     <script src="./scripts/autocomplete.js">
-</script>
-<script>
-function checkInput(inp, outp, arr){
-
-}
-
-/*An array containing all the country names in the world:*/
-var addresses = ["123 Dogville Avenue", "55 Super Sausage Street", "35 Puppy Place"];
 </script>
   </div>
   <img src="./images/address-image.png" alt="" width="500px">

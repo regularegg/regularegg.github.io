@@ -96,14 +96,26 @@ function autocomplete(inp, arr) {
   });
 }
 
-function checkInput(inp, outp, arr){
+  function checkInput(inp, arr){
+    var inputValue = document.getElementById("myInput").value;
+    var matchFound = false;
+    for(i = 0; i < arr.length; i++){
+      if(inputValue == arr[i]){
+        document.getElementById("submitOutcome").innerHTML = "Hurray! Your building is supported!";
+        matchFound = true;
+        break;
+      }
+    }
+    if(!matchFound){
+      document.getElementById("submitOutcome").innerHTML = "Sorry, your building isn't supported right now. Please check back later.";
+    }
+  }
 
-}
+  /*An array containing all the country names in the world:*/
+  var addresses = ["123 Dogville Avenue", "55 Super Sausage Street", "35 Puppy Place"];
 
-/*An array containing all the country names in the world:*/
-var addresses = ["123 Dogville Avenue", "55 Super Sausage Street", "35 Puppy Place"];
+//  checkInput(document.getElementById("myInput"), addresses);
 
 /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
 
 autocomplete(document.getElementById("myInput"), addresses);
-checkInput(document.getElementById("myInput"), document.getElementById("submitOutcome") addresses)
