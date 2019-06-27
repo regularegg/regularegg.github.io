@@ -1,18 +1,18 @@
 var canvas;
-var xDiv = 50;
-var yDiv = 30;
+var xDiv = 40;
+var yDiv = 50;
 var lsWidth;
 var lsHeight;
 var lineSegments = [];
 
 function setup(){
-  canvas = createCanvas(document.getElementById("p5-header-background").offsetWidth, document.getElementById("p5-header-background").offsetHeight * 1.75);
+  canvas = createCanvas(document.getElementById("p5-header-background").offsetWidth, document.getElementById("p5-header-background").offsetHeight * 2);
   canvas.parent('p5-header-background');
   background(255,255,255,0.3);
   //lsWidth = width/xDiv;
   //lsHeight = height/yDiv;
-  lsWidth = 50;
-  lsHeight = 30;
+  lsWidth = 80;
+  lsHeight = 7;
 
 
   noFill();
@@ -48,8 +48,8 @@ function lineSegment(moveLeft, xPos, yPos){
   var xOffset = 0;
 
   this.drawLine = function(){
-
-    stroke(map(yPos,0,height,220,255));
+    //strokeWeight(map(yPos,0,height/1.3,2,1));
+    stroke(255, 58, 28, map(yPos,0,height/1.3,100,0));
     if(moveLeft){
       xOffset = sin(millis()/900 + yPos/yDiv)*lsWidth/2;
     }else{
