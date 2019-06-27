@@ -1,5 +1,5 @@
 var canvas;
-var xDiv = 40;
+var xDiv = 50;
 var yDiv = 30;
 var lsWidth;
 var lsHeight;
@@ -9,8 +9,11 @@ function setup(){
   canvas = createCanvas(document.getElementById("p5-header-background").offsetWidth, document.getElementById("p5-header-background").offsetHeight * 1.75);
   canvas.parent('p5-header-background');
   background(255,255,255,0.3);
-  lsWidth = width/xDiv;
-  lsHeight = height/yDiv;
+  //lsWidth = width/xDiv;
+  //lsHeight = height/yDiv;
+  lsWidth = 50;
+  lsHeight = 30;
+
 
   noFill();
   strokeWeight(1);
@@ -22,7 +25,7 @@ function setup(){
       if(i%2==0){
         direction = true;
       }
-      col[j] = new lineSegment(direction, i*lsWidth, j*lsHeight);
+      col[j] = new lineSegment(direction, i*lsWidth, j*lsHeight-10);
     }
     lineSegments[i] = col;
   }
@@ -48,9 +51,9 @@ function lineSegment(moveLeft, xPos, yPos){
 
     stroke(map(yPos,0,height,220,255));
     if(moveLeft){
-      xOffset = sin(millis()/300 + yPos/yDiv)*lsWidth/2;
+      xOffset = sin(millis()/900 + yPos/yDiv)*lsWidth/2;
     }else{
-      xOffset = -sin(millis()/300 + yPos/yDiv)*lsWidth/2;
+      xOffset = -sin(millis()/900 + yPos/yDiv)*lsWidth/2;
     }
 
     beginShape();
@@ -58,5 +61,23 @@ function lineSegment(moveLeft, xPos, yPos){
     vertex(xPos+xOffset+(lsWidth/2), yPos + lsHeight);
     vertex(xPos + lsWidth, yPos);
     endShape();
+  }
+}
+
+function windowResized(){
+  resizeCanvas(document.getElementById("p5-header-background").offsetWidth, document.getElementById("p5-header-background").offsetHeight * 1.75);
+  //lsWidth = width/xDiv;
+  //lsHeight = height/yDiv;
+  //initialize 2D array of lengths
+  for (var i = 0; i < xDiv; i++) {
+    var col = [];
+    for (var j = 0; j < yDiv; j++) {
+      var direction = false;
+      if(i%2==0){
+        direction = true;
+      }
+      col[j] = new lineSegment(direction, i*lsWidth, j*lsHeight-10);
+    }
+    lineSegments[i] = col;
   }
 }
