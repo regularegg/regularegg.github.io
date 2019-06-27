@@ -1047,9 +1047,13 @@
  .portfolio-menu.hover-1 li.active,
  .menu-hover-1 li:hover a,
  .menu-hover-1 li a.active,
- .mainmenu li a.active,
+ .mainmenu li a.active{
+     color: #1a1a1a;
+ }
+
+ .menu-hover-1 li:hover a,
  .mainmenu li a:hover {
-     color: #a4a4a4;
+   color: #121212;
  }
   header .search-box > i,
  .header-style-1 .logo,
@@ -1230,7 +1234,7 @@
      top: 0;
      width: 100%;
      font-family: "futura-pt";
-     color: #666666;
+     color: #121212;
  }
  .mainmenu .navbar-collapse > ul li.dropdown .dropdown-btn.submenu-icon::after {
      content: "\f2fc";
@@ -3139,6 +3143,10 @@
  }
  h3 .topText .visible{
    opacity: 1;
+ }
+
+ li .active{
+   color: #121212;
  }
  /*====================================================================
 							[ END ]

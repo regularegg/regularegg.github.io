@@ -48,14 +48,16 @@ function lineSegment(moveLeft, xPos, yPos){
   var xOffset = 0;
 
   this.drawLine = function(){
-    //strokeWeight(map(yPos,0,height/1.3,2,1));
-    stroke(255, 58, 28, map(yPos,0,height/1.3,100,0));
+    //strokeWeight(map(yPos,0,height/1.3,1,1));
+    stroke(25, 228, 255, map(yPos,0,height/1.5,100,0));
     if(moveLeft){
-      xOffset = sin(millis()/900 + yPos/yDiv)*lsWidth/2;
+      xOffset = sin(millis()/700 + yPos/yDiv)*lsWidth/2;
     }else{
-      xOffset = -sin(millis()/900 + yPos/yDiv)*lsWidth/2;
+      xOffset = -sin(millis()/700 + yPos/yDiv)*lsWidth/2;
     }
-
+    if(yPos%12==0){
+      //stroke(25, 228, 255,map(yPos,0,height/1.3,200,0));
+    }
     beginShape();
     vertex(xPos, yPos);
     vertex(xPos+xOffset+(lsWidth/2), yPos + lsHeight);
@@ -65,10 +67,11 @@ function lineSegment(moveLeft, xPos, yPos){
 }
 
 function windowResized(){
-  resizeCanvas(document.getElementById("p5-header-background").offsetWidth, document.getElementById("p5-header-background").offsetHeight * 1.75);
+  resizeCanvas(document.getElementById("p5-header-background").offsetWidth, document.getElementById("p5-header-background").offsetHeight * 2);
   //lsWidth = width/xDiv;
   //lsHeight = height/yDiv;
   //initialize 2D array of lengths
+  ls = [];
   for (var i = 0; i < xDiv; i++) {
     var col = [];
     for (var j = 0; j < yDiv; j++) {
