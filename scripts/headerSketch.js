@@ -60,7 +60,7 @@ function lineSegment(moveLeft, xPos, yPos){
   this.drawLine = function(){
     //strokeWeight(map(yPos,0,height/1.3,2,1));
     //light blue
-    stroke(25, 228, 255, map(yPos,0,height/1.5,100,0));
+    stroke(25, 228, 255, map(yPos,0,height/1.5,100,0)*(twangFactor+1));
     //yellow
     /*
     if(yPos%10 == 0){
