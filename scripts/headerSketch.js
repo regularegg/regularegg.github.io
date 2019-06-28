@@ -45,7 +45,17 @@ function lineSegment(moveLeft, xPos, yPos){
   this.xPos = xPos;
   this.yPos = yPos;
 
+  var isHit = false;
+  var twangFactor = 0;
   var xOffset = 0;
+
+
+  this.twang = function(){
+    twangFactor -= 0.2;
+    if(twangFactor<0){
+      isHit = false;
+    }
+  }
 
   this.drawLine = function(){
     //strokeWeight(map(yPos,0,height/1.3,2,1));
@@ -64,12 +74,21 @@ function lineSegment(moveLeft, xPos, yPos){
     }else{
       xOffset = -sin(millis()/700 + yPos/yDiv)*lsWidth/2;
     }
-    if(yPos%12==0){
-      //stroke(25, 228, 255,map(yPos,0,height/1.3,200,0));
+//sqrt(sq(mouseX-xPos/2)) < 5 && sqrt(sq(mouseY-yPos/2)) < 2
+    if(dist(mouseX,mouseY, xPos + lsWidth/2,yPos + lsHeight/2) < 20){
+      isHit = true;
+      var mouseVect = createVector(mouseX - xPos+(lsWidth/2),mouseY - yPos + (lsWidth/2));
+      twangFactor = mouseVect.heading() * dist(mouseX, mouseY, xPos+(lsWidth/2), yPos);
     }
+
+    if(isHit){
+      print(twangFactor);
+      this.twang();
+    }
+    strokeWeight(abs(twangFactor)/4 + 1);
     beginShape();
     vertex(xPos, yPos);
-    vertex(xPos+xOffset+(lsWidth/2), yPos + lsHeight);
+    vertex(xPos+xOffset+(lsWidth/2), yPos + lsHeight + (twangFactor*sin(millis()/100)));
     vertex(xPos + lsWidth, yPos);
     endShape();
   }
