@@ -2787,8 +2787,8 @@
  .two-style6 .portfolio-grid,
  .two-style2 .grid-item,
  .two-style2 .portfolio-grid {
-     margin: 0;
-     padding: 0;
+     margin: 5;
+     padding: 5;
  }
  .two-style2 .grid-item:hover .project-title,
  .two-style2 .project-title {
@@ -2804,9 +2804,9 @@
  .two-style6 .grid-item:hover .single-portfolio img,
  .three-style2 .grid-item:hover .single-portfolio img,
  .two-style2 .grid-item:hover .single-portfolio img {
-     -webkit-transform: scale(.95);
-         -ms-transform: scale(.95);
-             transform: scale(.95);
+     -webkit-transform: scale(.98);
+         -ms-transform: scale(.98);
+             transform: scale(.98);
  }
  .two-style4 .portfolio-grid {
      margin: 0 -15px -20px -15px;

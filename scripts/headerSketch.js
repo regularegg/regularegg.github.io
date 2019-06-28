@@ -52,6 +52,7 @@ function lineSegment(moveLeft, xPos, yPos){
 
   this.twang = function(){
     twangFactor -= 0.2;
+    stroke(lerpColor(color(25, 228, 255,map(yPos,0,height/1.5,100,0)), color(255, 232, 25,map(yPos,0,height/1.5,100,0)),map(abs(twangFactor),0,10,0,1)));
     if(twangFactor<0){
       isHit = false;
     }
@@ -85,7 +86,7 @@ function lineSegment(moveLeft, xPos, yPos){
       print(twangFactor);
       this.twang();
     }
-    strokeWeight(abs(twangFactor)/4 + 1);
+    //strokeWeight(abs(twangFactor)/4 + 1);
     beginShape();
     vertex(xPos, yPos);
     vertex(xPos+xOffset+(lsWidth/2), yPos + lsHeight + (twangFactor*sin(millis()/100)));
