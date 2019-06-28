@@ -1626,7 +1626,7 @@
      left: 0;
      position: absolute;
      right: 0;
-     text-align: center;
+     text-align: left;
  }
  .logo-and-menu .mainmenu {
      display: flex;

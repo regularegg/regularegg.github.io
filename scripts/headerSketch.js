@@ -48,8 +48,17 @@ function lineSegment(moveLeft, xPos, yPos){
   var xOffset = 0;
 
   this.drawLine = function(){
-    //strokeWeight(map(yPos,0,height/1.3,1,1));
+    //strokeWeight(map(yPos,0,height/1.3,2,1));
+    //light blue
     stroke(25, 228, 255, map(yPos,0,height/1.5,100,0));
+    //yellow
+    /*
+    if(yPos%10 == 0){
+      stroke(255, 232, 25, map(yPos,0,height/1.5,255,0));
+    }else{
+      stroke(255, 191, 54, map(yPos,0,height/1.5,150,0));
+    }*/
+
     if(moveLeft){
       xOffset = sin(millis()/700 + yPos/yDiv)*lsWidth/2;
     }else{
