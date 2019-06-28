@@ -3137,6 +3137,9 @@
  }
 
  /*========Mary's Stuff==========*/
+ body {
+   font-family: "futura-pt",sans-serif;
+ }
  h3 .topText{
    opacity: 0;
    transition: opacity 1s;
@@ -3147,6 +3150,10 @@
 
  li .active{
    color: #121212;
+ }
+ ul .work-info {
+   font-family: "futura-pt",sans-serif;
+   font-size: 1000px;
  }
  /*====================================================================
 							[ END ]
