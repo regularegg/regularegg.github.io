@@ -3209,19 +3209,30 @@
    flex-direction: row;
    align-content: center;
  }
+ .flex-col-centered{
+   margin-left: 15%;
+   margin-right: 15%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
  .about-img{
    align-content: center;
+   padding: 20px;
    width: 400px;
+ }
+ .centered-text{
+   text-align: center;
  }
  @media (max-width: 767px) {
      .flex-row-centered {
        flex-direction: column;
-       align-content: center;
+       align-items: center;
        text-align: center;
      }
      .about-img{
        display: flex;
-       align-content: center;
+       align-items: center;
        width: 200px;
      }
  }
