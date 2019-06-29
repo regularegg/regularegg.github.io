@@ -197,7 +197,9 @@
      font-size: 13px;
  }
  /* Font Size */
-
+ .font-30 {
+     font-size: 30px;
+ }
  .font-40 {
      font-size: 40px;
  }
@@ -3134,6 +3136,9 @@
  /*========Mary's Stuff==========*/
  * {
    font-family: "futura-pt",sans-serif;
+ }
+ h6 .topText{
+   
  }
  h3 .topText{
    opacity: 0;
