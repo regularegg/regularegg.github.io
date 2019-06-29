@@ -136,6 +136,11 @@
      outline: none;
      text-decoration: none;
  }
+
+ a .body-text{
+   text-transform: nones;
+   color: #F05323;
+ }
  /* Transition
 =============== */
 
