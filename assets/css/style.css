@@ -121,7 +121,6 @@
      color: #a1a1a1;
      font-family: "futura-pt", sans-serif;
      font-weight: 700;
-     text-transform: uppercase;
      line-height: 1;
  }
  a,
@@ -138,9 +137,13 @@
  }
 
  a .body-text{
-   text-transform: nones;
+   text-transform: none;
    color: #F05323;
  }
+ .navigation a{
+   text-transform: uppercase;
+ }
+
  /* Transition
 =============== */
 
@@ -1532,12 +1535,48 @@
      width: 45px;
  }
  .zoom-icon {
+   left: 50%;
+   margin-left: -55px;
+   margin-top: 0px;
+   position: absolute;
+   top: 50%;
+ }
+ .zoomtest{
+   position: absolute;
+ }
+ .zoomtest h3{
+   color:#121212;
+   text-transform: none;
+   z-index: 10;
+ }
+ .zoomtest {
+     -webkit-transition: all 0.3s ease 0s;
+     -o-transition: all 0.3s ease 0s;
+     transition: all 0.3s ease 0s;
+ }
+ .hover-1 .grid-item:hover .zoomtest {
+     margin-top: -10px;
+     z-index: 100;
+ }
+ .zoomtest,
+ .hover-1 .single-portfolio::before {
+     opacity: 0;
+     -webkit-transition: all 0.4s ease 0s;
+     -o-transition: all 0.4s ease 0s;
+     transition: all 0.4s ease 0s;
+ }
+ .hover-1 .grid-item:hover .zoomtest,
+ .hover-1 .grid-item:hover *::before {
+    opacity: 1;
+}
+ /*.zoom-icon {
+   outline-style: dashed;
      left: 50%;
      margin-left: -55px;
      margin-top: 0px;
      position: absolute;
      top: 50%;
- }
+ }*/
  .zoom-icon {
      -webkit-transition: all 0.3s ease 0s;
      -o-transition: all 0.3s ease 0s;
@@ -1564,6 +1603,11 @@
  .thumb img,
  .single-portfolio img {
      width: 100%;
+ }
+ .single-portfolio{
+   display: flex;
+   align-items: center;
+   justify-content: center;
  }
  .vbox-overlay {
      cursor: url("../img/icons/close-x.png"), auto;
@@ -1828,6 +1872,7 @@
 
  .project-title,
  .zoom-icon {
+     text-transform: uppercase;
      z-index: 5;
  }
  .single-portfolio img {
