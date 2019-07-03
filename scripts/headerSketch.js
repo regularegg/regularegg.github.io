@@ -8,7 +8,8 @@ var lineSegments = [];
 function setup(){
   canvas = createCanvas(document.getElementById("p5-header-background").offsetWidth, document.getElementById("p5-header-background").offsetHeight * 2);
   canvas.parent('p5-header-background');
-  background(255,255,255,0.3);
+  //background(255,255,255,0.3);
+  background(255,0,0);
   lsWidth = 80;
   lsHeight = 7;
 
