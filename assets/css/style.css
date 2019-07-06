@@ -3253,6 +3253,11 @@
    display: flex;
    justify-content: center;
  }
+ .portfolio-two-row-left{
+   display: flex;
+   justify-content: left;
+   padding-top: 50px;
+ }
  .portfolio-centered{
    display: flex;
    flex-direction: column;
@@ -3317,6 +3322,11 @@
  .header-img-side{
    position:absolute;
    height:100%;
+ }
+
+ .marginLR-20{
+   margin-left: 20px;
+   margin-right: 20px;
  }
  /*====================================================================
 							[ END ]

@@ -1,9 +1,9 @@
 $(document).ready(function() {
   $('#imageGallery').lightSlider({
-      gallery:true,
+      gallery:false,
       item:1,
       loop:true,
-      thumbItem:9,
+      thumbItem:0,
       slideMargin:0,
       enableDrag: false,
       currentPagerPosition:'left',
