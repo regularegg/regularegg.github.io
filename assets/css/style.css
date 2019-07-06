@@ -451,6 +451,10 @@
      padding-top: 60px;
      padding-bottom: 60px;
  }
+ .ptb-80 {
+     padding-top: 80px;
+     padding-bottom: 80px;
+ }
  .ptb-100 {
      padding-top: 100px;
      padding-bottom: 100px;
@@ -3217,7 +3221,6 @@
 
  .pages-header{
    background-size:cover;
-   height: 50vh;
  }
  .header-text{
    background-color: white;
@@ -3310,6 +3313,10 @@
      align-content: center;
      width: 200px;
    }
+ }
+ .header-img-side{
+   position:absolute;
+   height:100%;
  }
  /*====================================================================
 							[ END ]
