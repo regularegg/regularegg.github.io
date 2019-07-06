@@ -55,12 +55,12 @@
      height: 100%;
  }
  ::-moz-selection {
-     background: #cccccc;
+     background: #FAE80B;
      text-shadow: none;
      color: #000000;
  }
  ::selection {
-     background: #cccccc;
+     background: #FAE80B;
      text-shadow: none;
      color: #000000;
  }
